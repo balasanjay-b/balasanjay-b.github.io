@@ -276,7 +276,7 @@ footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);display
       <div class="info">
         <span class="label">Project 02 · Fall 2026</span>
         <h2>Pollen filter: a two-ramp sorting system</h2>
-        <span class="status">In development <small>FIRST Tech Challenge, Team 547</small></span>
+        <span class="status">Design complete <small>FIRST Tech Challenge, Team 547</small></span>
         <p>A passive sorter for my school's FTC robot. Game pieces called pollen come in two sizes, and the robot has to separate them. My design uses two stacked ramps: large pollen rides across the top ramp, and small pollen drops through a gap in it onto a lower ramp that sends it the other way.</p>
       </div>
     </div>
@@ -342,13 +342,24 @@ footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);display
       </section>
 
       <section class="part">
-        <span class="label">Next steps</span>
+        <span class="label">Result</span>
+        <div class="part-body">
+          <div class="result">
+            <span class="big" style="font-size:30px">Not used</span>
+            <p><b>The team chose a faster approach for the final robot.</b> After reviewing the design, we decided that a gravity-fed sorter would be too slow for match play, where every second of cycle time counts. My two-ramp filter stayed a finished design that never went onto the robot.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="part">
+        <span class="label">What I learned</span>
         <div class="prose">
-          <h3>What I'm working on</h3>
+          <h3>Takeaways</h3>
           <ul>
-            <li><b>Tune the gap.</b> Test with real pollen to find a gap that reliably drops every small piece without catching large ones.</li>
-            <li><b>Check the ramp angles.</b> Make sure pollen keeps rolling without jamming, and exits fast enough for match timing.</li>
-            <li><b>Integrate it on the robot.</b> Line up the inlet with the intake and the two exits with where each size needs to go.</li>
+            <li><b>Simple isn't always the best choice.</b> I went with gravity because it needed no motors or code. That made it reliable, but it also capped how fast pieces could move through it.</li>
+            <li><b>Set the requirements first.</b> Next time I'd pin down a target cycle time before designing, so speed is part of the brief from the start and not something discovered at review.</li>
+            <li><b>Test early with real parts.</b> A quick printed prototype and a stopwatch would have shown the speed problem sooner and made the team's decision easier.</li>
+            <li><b>A design that isn't used can still be useful.</b> Working through this one helped the team compare options and settle on what the final robot needed.</li>
           </ul>
         </div>
       </section>
