@@ -111,6 +111,13 @@ figcaption b{color:var(--ink);font-weight:600}
 .flow li::before{counter-increment:s;content:counter(s);font-family:var(--mono);font-size:13px;width:28px;height:28px;border-radius:50%;
   display:grid;place-items:center;border:1px solid var(--rule);color:var(--accent);margin-top:1px}
 
+.contact{display:flex;flex-wrap:wrap;gap:10px}
+.contact .c{display:inline-flex;align-items:center;gap:10px;padding:8px 8px 8px 14px;border:1px solid var(--rule);border-radius:3px;background:var(--sheet);min-width:0;max-width:100%}
+.contact .c a{font-family:var(--mono);font-size:14px;text-decoration:none;overflow-wrap:anywhere;user-select:all}
+.contact .c a:hover{color:var(--accent)}
+.contact button{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--rule);border-radius:3px;padding:4px 8px;cursor:pointer}
+.contact button:hover{color:var(--accent);border-color:var(--accent)}
+
 footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 @media (max-width:860px){
@@ -145,6 +152,10 @@ footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);display
       <div><span class="label">School</span><b>Gretchen Whitney High School</b></div>
       <div><span class="label">Grade</span><b>11th grade</b></div>
       <div><span class="label">Focus</span><b>Mechanical engineering</b></div>
+    </div>
+    <div class="contact" aria-label="Contact">
+      <span class="c"><span class="label">Email</span><a href="mailto:balasanjaybalamurugan318@gmail.com">balasanjaybalamurugan318@gmail.com</a><button type="button" data-copy="balasanjaybalamurugan318@gmail.com">Copy</button></span>
+      <span class="c"><span class="label">Phone</span><a href="tel:+17147665656">(714) 766-5656</a><button type="button" data-copy="714-766-5656">Copy</button></span>
     </div>
     <div class="skills" aria-label="Skills">
       <span>Onshape CAD</span><span>Part studios &amp; assemblies</span><span>Laser cutting (DXF)</span><span>FDM 3D printing</span><span>Arduino basics</span><span>Design iteration</span>
@@ -346,9 +357,18 @@ footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);display
 
   <footer>
     <span class="label">Balasanjay Balamurugan · Engineering portfolio</span>
-    <span class="label">CAD: Onshape</span>
+    <div class="contact" aria-label="Contact">
+      <span class="c"><span class="label">Email</span><a href="mailto:balasanjaybalamurugan318@gmail.com">balasanjaybalamurugan318@gmail.com</a><button type="button" data-copy="balasanjaybalamurugan318@gmail.com">Copy</button></span>
+      <span class="c"><span class="label">Phone</span><a href="tel:+17147665656">(714) 766-5656</a><button type="button" data-copy="714-766-5656">Copy</button></span>
+    </div>
   </footer>
 </div>
+<script>
+document.addEventListener('click',async e=>{const b=e.target.closest('button[data-copy]');if(!b)return;const v=b.dataset.copy;
+ try{await navigator.clipboard.writeText(v);b.textContent='Copied';}
+ catch(_){const a=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(a);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+ setTimeout(()=>b.textContent='Copy',1600);});
+</script>
 
 </body>
 </html>
